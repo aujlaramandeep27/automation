@@ -4,6 +4,7 @@ import org.junit.runner.Result;
 
 import testCase1.TestCase1;
 import testCase2.TestCase2;
+import utils.FileUtils;
 
 public class TestCases {
 	
@@ -16,6 +17,12 @@ public class TestCases {
 		testCase1.printTestResults();
 		
 		// Test Case 2
+		
+		if (System.getProperty("webdriver.chrome.driver") == null) {
+			FileUtils fileUtils = new FileUtils();
+			String chromedriverPath = fileUtils.getFilePathFromResource("chromedriver");
+			System.setProperty("webdriver.chrome.driver", chromedriverPath);
+		}
 		
 		System.out.println("Execution of Test Case 2: \n");
 		JUnitCore junit = new JUnitCore();
