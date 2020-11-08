@@ -11,7 +11,7 @@ import com.google.common.base.Strings;
 
 public class TestCase1 {
 	
-	public static void main(String[] args) {
+	public void printTestResults() {
 		
 		FileUtils fileUtils = new FileUtils();
 		
@@ -32,7 +32,7 @@ public class TestCase1 {
 	    }
 	}
 	
-	public static List<TestSuite> getTestSuites(JSONObject jo) {
+	public List<TestSuite> getTestSuites(JSONObject jo) {
 		
 		JSONArray testSuites = (JSONArray)jo.get("test_suites");
 	       
@@ -48,7 +48,7 @@ public class TestCase1 {
 		return testSuitesList;
 	}
 	
-	public static TestSuite getTestSuite(JSONObject jo) {
+	public TestSuite getTestSuite(JSONObject jo) {
 		TestSuite testSuite = new TestSuite();
   	  
   	  	// Get Suite Name 
@@ -83,7 +83,7 @@ public class TestCase1 {
 		
 	}
 	
-	public static List<TestResult> getTestResults(JSONObject jo) {
+	public List<TestResult> getTestResults(JSONObject jo) {
 		
 		JSONArray results = (JSONArray)jo.get("results");
 		Iterator itr = results.iterator();
@@ -101,7 +101,7 @@ public class TestCase1 {
 		
 	}
 	
-	public static TestResult getTestResult(JSONObject jo) {
+	public TestResult getTestResult(JSONObject jo) {
 		
 		TestResult testResult = new TestResult();
   		testResult.name = ((String)jo.get("test_name")).trim();
