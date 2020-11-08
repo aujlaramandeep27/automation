@@ -22,10 +22,10 @@ public class TestCases {
 		  junit.addListener(new TextListener(System.out));
 		  Result result = junit.run(TestCase2.class); 
 		  if (result.getFailureCount() > 0) {
-		    System.out.println("Test failed.");
+		    System.out.println("Tests failed.");
 		    System.exit(1);
 		  } else {
-		    System.out.println("Test finished successfully.");
+		    System.out.println("Tests finished successfully.");
 		    System.exit(0);
 		  }
 		
