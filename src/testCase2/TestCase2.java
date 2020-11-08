@@ -15,7 +15,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class SeleniumTest {
+public class TestCase2 {
 	
 	private WebDriver driver;
 	private String baseUrl = "https://slashdot.org/";

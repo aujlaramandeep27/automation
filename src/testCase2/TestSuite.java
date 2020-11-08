@@ -7,7 +7,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({SeleniumTest.class})
+@SuiteClasses({TestCase2.class})
 public class TestSuite {
 
     @BeforeClass

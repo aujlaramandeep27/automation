@@ -9,7 +9,7 @@ import org.json.simple.parser.*;
 import com.google.common.base.Strings;
 
 
-public class TestReport {
+public class TestCase1 {
 	
 	public static void main(String[] args) {
 		
