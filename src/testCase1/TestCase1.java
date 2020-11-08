@@ -13,8 +13,12 @@ public class TestCase1 {
 	
 	public static void main(String[] args) {
 		
-	    try {
-	       Object obj = new JSONParser().parse(new FileReader("./resources/test_results.json"));
+		FileUtils fileUtils = new FileUtils();
+		
+	    try (InputStream is = fileUtils.getFileFromResourceAsStream("test_results.json"); 
+	    	     Reader rd = new InputStreamReader(is, "UTF-8"); ){
+	    	
+	       Object obj = new JSONParser().parse(rd);
 	       JSONObject jo = (JSONObject)obj;
 	       
 	       List<TestSuite> testSuitesList = getTestSuites(jo);

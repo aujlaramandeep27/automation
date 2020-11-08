@@ -22,6 +22,8 @@ public class TestCase2 {
 	
 	@Before
 	public void setup() {
+		// Optional. If not specified, WebDriver searches the PATH for chromedriver.
+		System.setProperty("webdriver.chrome.driver", "./src/drivers/chromedriver");
 		driver = new ChromeDriver();
 	    driver.manage().window().maximize();
 	    driver.get(baseUrl);
