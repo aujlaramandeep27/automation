@@ -25,16 +25,18 @@ public class TestCases {
 		}
 		
 		System.out.println("Execution of Test Case 2: \n");
+		
 		JUnitCore junit = new JUnitCore();
-		  junit.addListener(new TextListener(System.out));
-		  Result result = junit.run(TestCase2.class); 
-		  if (result.getFailureCount() > 0) {
-		    System.out.println("Tests failed.");
-		    System.exit(1);
-		  } else {
-		    System.out.println("Tests finished successfully.");
-		    System.exit(0);
-		  }
+		junit.addListener(new TextListener(System.out));
+		Result result = junit.run(TestCase2.class);
+		
+		if (result.getFailureCount() > 0) {
+			System.out.println("Tests failed.");
+			System.exit(1);
+		} else {
+			System.out.println("Tests finished successfully.");
+			System.exit(0);
+		}
 		
 	}
 
